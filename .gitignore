@@ -1,0 +1,19 @@
+# Ignorar entornos virtuales
+.venv/
+env/
+
+# Ignorar dependencias de Node.js
+node_modules/
+
+# Ignorar dependencias de Python
+__pycache__/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos binarios o generados
+*.exe
+*.dll
+*.obj
+*.o
+
