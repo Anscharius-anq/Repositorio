@@ -17,3 +17,6 @@ __pycache__/
 *.obj
 *.o
 
+# Ignorar el entorno virtual
+python/venv/
+
