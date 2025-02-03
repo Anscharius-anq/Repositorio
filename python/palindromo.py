@@ -27,5 +27,7 @@ def palindromo(texto: str) -> bool:
     reversed_text = reverse(new_text)
     return new_text == reversed_text
 
- 
- 
+
+if __name__ == "__main__":
+    import sys
+    print(palindromo(sys.argv[1]) )

@@ -29,7 +29,7 @@
   
 &ensp; **Variable y constantes:** Una variable es un conjunto formado por:
   
-1. **Dato:** El valor que se almacena.
+1. **Dato:** El valor que se almacena.w
 2. **Identificador:** El nombre usado para referirse al dato.
 3. **Espacio en memoria:** El lugar donde se almacena el dato en la computadora
   

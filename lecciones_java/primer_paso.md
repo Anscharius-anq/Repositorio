@@ -47,7 +47,8 @@ Las variables primitivas almacenan valores basicos.
 
 #### 1.- Números enteros.
 Para almacenar números, se recomienda utilizar el tipo adecuado según las necesidades de precisión 
-y espacio en memoria:
+y espacio en memoria. aunque las computadores actuales no habría problema solo definir int en vez de
+byte o short.
 
 * **byte:** Número entero pequeño, con un rango de -128 a 127, ocupa menos espacio en memoria (1byte).
 * **short:** Número entero de tamaño intermedio, con un rango de -32,768 a 32,767 (2 bytes).
