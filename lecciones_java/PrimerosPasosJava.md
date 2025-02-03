@@ -35,7 +35,7 @@ simples, el enfoque principal sigue siendo la programación orientada a objetos.
 * `System.out.println("Hello, World!")`:
     Esta instrucción se utiliza para imprimir texto en la consola. System.out es el flujo de salida 
     estándar (la consola), y println es un método que imprime el texto y mueve el cursor a la siguiente 
-    línea. 
+    línea.  
     
 Cada vez que escribas código en Java, el contenido principal estará dentro de las llaves { } 
 del método main.
