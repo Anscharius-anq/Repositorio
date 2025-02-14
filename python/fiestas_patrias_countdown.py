@@ -10,11 +10,11 @@ def get_fiestas_patrias() -> datetime:
     Chile."""
 
     santiago_timezone = ZoneInfo("America/Santiago")
-    # Obtener y converitr fecha/hora la zona horaria del usuario a la de Chile
+    # Obtener y convertir fecha/hora la zona horaria del usuario a la de Chile
     user_datetime = datetime.now(get_localzone())
     user_datetime_chl = user_datetime.astimezone(santiago_timezone)
 
-     # Definir la fecha de las próximas Fiestas Patrias (18 de septiembre)
+    # Definir la fecha de las próximas Fiestas Patrias (18 de septiembre)
     fiestas_patrias = datetime(user_datetime_chl.year, 9, 18,
                                tzinfo=(santiago_timezone))
 
@@ -36,24 +36,24 @@ def timer() -> Iterator[Tuple[int, int, int, int]]:
     santiago_tz = ZoneInfo("America/Santiago")
 
     while True:
-        # Obtener la fecha y hora actual en la zona horaria del usuario 
+        # Obtener la fecha y hora actual en la zona horaria del usuario
         # y convertirla a Santiago
         user_datetime = datetime.now(get_localzone()).astimezone(santiago_tz)
         countdown = fiestas_patrias - user_datetime
 
-         # Si el tiempo ha llegado a 0, recalcular la próxima fecha y continuar
+        # Si el tiempo ha llegado a 0, recalcular la próxima fecha y continuar
         if countdown.total_seconds() <= 0:
             fiestas_patrias = get_fiestas_patrias()
             continue
 
-        # Extraer los días, horas, minutos y segundos del timedelta resultante   
+        # Extraer los días, horas, minutos y segundos del timedelta resultante
         days = countdown.days
         hours, reminder = divmod(countdown.seconds, 3600)
         minutes, seconds = divmod(reminder, 60)
 
         # Retornar los valores como una tupla
-        yield  days, hours, minutes, seconds
-        
+        yield days, hours, minutes, seconds
+
         time.sleep(1)
 
 
