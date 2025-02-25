@@ -4,7 +4,7 @@ import sys
 import time
 
 
-def display_hangman(frame):
+def hangman_animation(frame):
     with open("C:/Users/oscar/workspace/repositorio/python/hangman_frames.txt",
               "r", encoding="utf-8") as file:
         hangman_ascii = file.read()
@@ -23,8 +23,8 @@ def show_blink_effect(frame):
             sys.stdout.write(CURSOR_UP_ONE)
             sys.stdout.write(ERASE_LINE)
 
-    actual_frame = display_hangman(frame)
-    next_frame = display_hangman(frame + 1)
+    actual_frame = hangman_animation(frame)
+    next_frame = hangman_animation(frame + 1)
 
     for _ in range(3):
         print(actual_frame)
