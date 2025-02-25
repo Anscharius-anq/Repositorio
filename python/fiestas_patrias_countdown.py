@@ -1,4 +1,5 @@
 import time
+import os
 from zoneinfo import ZoneInfo
 from datetime import datetime
 from tzlocal import get_localzone
@@ -68,11 +69,12 @@ def timer() -> Iterator[Tuple[int, int, int, int]]:
 
 if __name__ == "__main__":
     def main() -> None:
+        os.system('cls' if os.name == 'nt' else 'clear')
         try:
             for days, hours, minutes, seconds in timer():
-                print(f"{days} días {hours:02}:{minutes:02}:{seconds:02}",
-                      "¡para las fiestas patrias! 🎉",
+                print(f"· ¡Faltan {days} días {hours:02}:{minutes:02}:{seconds:02}",
+                      "para las fiestas patrias! 🎉",
                       end="\r")
         except KeyboardInterrupt:
-            print("\nContador detenido")
+            print("\nContador detenido\n")
     main()
