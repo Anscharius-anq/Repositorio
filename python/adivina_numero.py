@@ -8,8 +8,7 @@ def user_input(start: int, end: int) -> int:
     """Solicita un número al usuario dentro de un rango especificado."""
     while True:
         try:
-            user_number = int(
-                input(f"> Ingrese un número entre [{start} - {end}]: "))
+            user_number = int(input(f"> Ingrese un número entre [{start} - {end}]: "))
             if start <= user_number <= end:
                 return user_number
             else:
@@ -32,8 +31,9 @@ def waiting_animation():
 def restart():
     while True:
 
-        restart_confirmation = input(
-            "¿Desea comenzar otra ronda? [S/n]: ").strip().lower()
+        restart_confirmation = (
+            input("¿Desea comenzar otra ronda? [S/n]: ").strip().lower()
+        )
 
         match restart_confirmation:
             case "s" | "si" | "sí" | "yes" | "y":
@@ -46,7 +46,7 @@ def restart():
 
 def main():
 
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
     start, end = 0, 100
 
     print("--- ¡Bienvenido al juego de adivinar un número! ---")
@@ -65,20 +65,19 @@ def main():
 
             if generated_number == number:
                 print(
-                    f"¡Correcto! El número es {number}. Lo lograste en {attempts} intentos.")
+                    f"¡Correcto! El número es {number}. Lo lograste en {attempts} intentos."
+                )
                 break
             elif generated_number < number:
-                print(
-                    f"Incorrecto. Intento: {attempts}, el número es menor a {number}")
+                print(f"Incorrecto. El número es menor a {number}")
             elif generated_number > number:
-                print(
-                    f"Incorrecto. Intento: {attempts}, el número es mayor a {number}")
+                print(f"Incorrecto. El número es mayor a {number}")
 
         if not restart():
             print("--- Fin del programa ---")
             break
 
-        os.system('cls' if os.name == 'nt' else 'clear')
+        os.system("cls" if os.name == "nt" else "clear")
 
 
 if __name__ == "__main__":
