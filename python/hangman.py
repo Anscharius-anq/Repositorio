@@ -124,7 +124,7 @@ def print_status(empty_list, attempts, incorrect_letters, message):
     print()
     print(" ".join(empty_list))
     print()
-    print(f"· Letras incorrectas: {", ".join(incorrect_letters).upper()}")
+    print(f"· Letras incorrectas: {", ".join(incorrect_letters).upper()}" if attempts !=0 else " ")
     print(message)
 
 
